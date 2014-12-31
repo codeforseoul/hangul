@@ -1,0 +1,86 @@
+/* simple html style */
+body { background-color: #fdf5e6 }
+
+a.tooltiphover{
+    text-decoration:none;
+    color:#000;
+	border-bottom: 1px dotted;
+}
+.tooltiptext{
+    display: none;
+}
+
+
+
+a.info{
+    position:relative; /*this is the key*/
+    color:#000;
+    text-decoration:none;
+    text-align:center;
+    border-bottom: 1px dotted;
+  }
+
+
+
+a.info span{display: none}
+
+a.info:hover span{ /*the span will display just on :hover state*/
+    display:block;
+    position:absolute;
+    top:20px;
+    width:15em;
+    border:5px solid #000;
+    background-color:#fff; color:#000;
+    text-align: center;
+    padding:10px;
+  }
+
+
+
+
+a:hover { color: red }
+.title { 
+  margin-left: auto; 
+  margin-right: auto; 
+  border-width: 5px;
+  border-spacing: 2px;
+  border-style: outset;
+}
+.title th { 
+  background-color: #ef8429;
+  font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+th { background-color: #ef8429;
+     font-size: 18px;
+     font-family: Arial, Helvetica, sans-serif;
+}
+td { font-size: 18px;
+     font-family: Arial, Helvetica, sans-serif;
+}
+legend {
+  font-weight: bold;
+  color: black;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+  padding: 3px 2px;
+}
+.ajaxResult { color: #440000;
+              font-weight: bold;
+              font-size: 18px;
+              font-family: Arial, Helvetica, sans-serif;
+}
+h2 { color: #440000;
+	  font-weight: bold;
+	  font-size: 18px;
+	  font-family: Arial, Helvetica, sans-serif;
+}
+.error { background-color: yellow;
+	      color: red;
+	      font-weight: bold;
+	      font-size: 20px;
+	      font-family: Arial, Helvetica, sans-serif;
+	      border-style: inset;
+}
+
+
