@@ -21,86 +21,86 @@ public class HangulUtilTest {
 
 	@Test
 	public void testBaseVowels() {
-		testRomanization( "¾Æ", "ah" );
-		testRomanization( "¾î", "uh" );
-		testRomanization( "¿À", "oh" );
-		testRomanization( "¿ì", "oo" );
-		testRomanization( "À¸", "u" );
-		testRomanization( "ÀÌ", "ee" );
+		testRomanization( "ì•„", "ah" );
+		testRomanization( "ì–´", "uh" );
+		testRomanization( "ì˜¤", "oh" );
+		testRomanization( "ìš°", "oo" );
+		testRomanization( "ìœ¼", "u" );
+		testRomanization( "ì´", "ee" );
 	}
 
 	@Test
 	public void testYVowels() {
-		testRomanization( "¾ß", "yah" );
-		testRomanization( "¿©", "yuh" );
-		testRomanization( "¿ä", "yoh" );
-		testRomanization( "À¯", "yoo" );
+		testRomanization( "ì•¼", "yah" );
+		testRomanization( "ì—¬", "yuh" );
+		testRomanization( "ìš”", "yoh" );
+		testRomanization( "ìœ ", "yoo" );
 	}
 
 	@Test
 	public void testCompoundVowels() {
-		testRomanization( "¾Ö", "eh" );
-		testRomanization( "¾ê", "yeh" );
-		testRomanization( "¿¡", "ay" );
-		testRomanization( "¿¹", "yay" );
-		testRomanization( "ÀÇ", "uee" );
+		testRomanization( "ì• ", "eh" );
+		testRomanization( "ì–˜", "yeh" );
+		testRomanization( "ì—", "ay" );
+		testRomanization( "ì˜ˆ", "yay" );
+		testRomanization( "ì˜", "uee" );
 	}
 
 	@Test
 	public void testWVowels() {
-		testRomanization( "¿Í", "wah" );
-		testRomanization( "¿Ö", "weh" );
-		testRomanization( "¿Ü", "weh" );
-		testRomanization( "¿ö", "wuh" );
-		testRomanization( "¿ş", "weh" );	//TODO: double check
-		testRomanization( "À§", "wee" );
+		testRomanization( "ì™€", "wah" );
+		testRomanization( "ì™œ", "weh" );
+		testRomanization( "ì™¸", "weh" );
+		testRomanization( "ì›Œ", "wuh" );
+		testRomanization( "ì›¨", "weh" );	//TODO: double check
+		testRomanization( "ìœ„", "wee" );
 	}
 
 
 	@Test
 	public void testNullLead() {
-		testRomanization( "¾Æ", "ah" );
+		testRomanization( "ì•„", "ah" );
 	}
 
 	@Test
 	public void testSingleLead() {
-		testRomanization( "°¡", "gah" );
+		testRomanization( "ê°€", "gah" );
 	}
 
 	@Test
 	public void testDoubleLead() {
-		testRomanization( "±î", "kkah" );
+		testRomanization( "ê¹Œ", "kkah" );
 	}
 
 	@Test
 	public void testNullLeadBasicTrailer() {
-		testRomanization( "¾Ç", "ahk" );
+		testRomanization( "ì•…", "ahk" );
 	}
 
 	@Test
 	public void testSingleLeadBasicTrailer() {
-		testRomanization( "°¢", "gahk" );
+		testRomanization( "ê°", "gahk" );
 	}
 
 	@Test
 	public void testSingleLeadDoubleTrailer() {
-		testRomanization( "A", "gahkk" );
+		testRomanization( "ê°‚", "gahkk" );
 	}
 
 
 	@Test
 	public void testHyphens() {
-		testRomanization( "¾Ç¾Ç¾Ç", "ahk-ahk-ahk" );
+		testRomanization( "ì•…ì•…ì•…", "ahk-ahk-ahk" );
 	}
 
 
 	@Test
 	public void testSpacing() {
-		testRomanization( "¾Ç ¾Ç¾Ç ¾Ç¾Ç¾Ç", "ahk ahk-ahk ahk-ahk-ahk" );
+		testRomanization( "ì•… ì•…ì•… ì•…ì•…ì•…", "ahk ahk-ahk ahk-ahk-ahk" );
 	}
 
 	@Test
 	public void testNonHangulMixing() {
-		testRomanization( "¾Çxyz ¾Ç¾Ç:¾Ç¾Ç¾Ç", "ahkxyz ahk-ahk:ahk-ahk-ahk" );
+		testRomanization( "ì•…xyz ì•…ì•…:ì•…ì•…ì•…", "ahkxyz ahk-ahk:ahk-ahk-ahk" );
 	}
 }
