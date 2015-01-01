@@ -1,13 +1,11 @@
-#hangul: Korean Hangul Romanization
+#Korean Hangul Romanization
 
-##Reference Information:
+###Reference Information:
 
- - [Hangul Unicode code sample in Perl] (http://search.cpan.org/~sadahiro/Lingua-KO-Hangul-Util-0.27/Util.pm)
+ - [Hangul Unicode code sample in Perl](http://search.cpan.org/~sadahiro/Lingua-KO-Hangul-Util-0.27/Util.pm)
  - [Wikipedia Hangul Unicode guide](http://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode)
  - [Korean government official romanization standard](http://www.korean.go.kr/eng_new/document/roman/roman_01.jsp)
 
-
-##Project Motivation
 
 ### History of Hangul Romanization
 
@@ -49,9 +47,30 @@ For the above reasons, the romanization standard rests on the following features
  3. syllable alignment will be explicitly denoted by hyphenation ("seoul" => "suh-ool")
 
 
-## Table of Vowels: Hangul vs. RR vs. New
 
-###Basic Vowels
+
+
+- - -
+
+
+
+
+
+# Technical Details of Solution
+
+### Running this Software
+
+ - repository:	Git / GitHub
+ - language:	Java
+ - build:		Maven
+ - main:		com.dragoncrane.hangul.Prototype
+ - arg1:		path to hangul input - must be on classpath (eg "/data/input.txt")
+ - arg2:		absolute path to romanized output (eg "C:\dave\output.txt")
+ - execution:	run "mvn test" on command line (uses exec-maven-plugin)
+
+### Table of Vowels: Hangul vs. RR vs. New
+
+Basic Vowels
 
 ```
 한글		RR		New
@@ -64,7 +83,7 @@ For the above reasons, the romanization standard rests on the following features
 이		i		ee
 ```
 
-###Basic Y-vowels
+Basic Y-vowels
 
 ```
 한글		RR		New
@@ -75,7 +94,7 @@ For the above reasons, the romanization standard rests on the following features
 유		yu		yoo
 ```
 
-###Compound Vowels
+Compound Vowels
 
 ```
 한글		RR		New
@@ -86,7 +105,7 @@ For the above reasons, the romanization standard rests on the following features
 위		w		wee
 ```
 
-###Compound Y-Vowels
+Compound Y-Vowels
 
 ```
 한글		RR		New
@@ -95,7 +114,7 @@ For the above reasons, the romanization standard rests on the following features
 예		ye		yay
 ```
 
-###Dipthongs/Tripthongs
+Dipthongs/Tripthongs
 
 ```
 한글		RR		New
@@ -108,13 +127,15 @@ For the above reasons, the romanization standard rests on the following features
 ```
 
 
-## Possible Applications
+- - -
+
+# Possible Applications
 
 The underlying romanization standard is a simple engine that takes in Hangul and returns Romainzed text.
 
 This engine can be plugged into a variety of contexts:
 
-###music
+###Music
 K-Pop is steadily growing in popularity abroad. Moreover, due to streaming services, musicians are disproportionately dependent on overseas sales for sales revenue (e.g. Psy's "Gangnam Style" earned over $10M in the US, but less than $100,000 in the Korean market).
 
 Many of these fans would like to sing along to their favorite K-pop songs but do not wish to invest the time in learning Hangul. An improved romanization system would make the lyrics more accessible, increasing sales volume.
