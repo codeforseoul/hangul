@@ -4,17 +4,17 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.dragoncrane.hangul.Prototype;
+import com.dragoncrane.hangul.HangulUtil;
 
 
 public class HangulUtilTest {
-	private Prototype prototype = Prototype.getInstance();
+	private HangulUtil prototype = HangulUtil.getInstance();
 	private String message = "String comparison failed: ";
 
 	
 
 	private void testRomanization( String hangul, String expected ) {
-		String actual = prototype.romanizeString( hangul );
+		String actual = prototype.romanize( hangul );
 		assertEquals(message, expected, actual );
 	}
 

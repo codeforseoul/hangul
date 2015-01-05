@@ -56,6 +56,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>hangul</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -90,12 +91,12 @@
 				<version>1.3.2</version>
 				<executions>
 					<execution>
-						<phase>compile</phase>
+						<phase>install</phase>
 						<goals>
 							<goal>java</goal>
 						</goals>
 						<configuration>
-							<mainClass>com.dragoncrane.hangul.Prototype</mainClass>
+							<mainClass>com.dragoncrane.hangul.HangulUtil</mainClass>
 							<arguments>
 								<argument>/lyrics/gangnam-style/hangul.txt</argument>
 								<argument>C:\Users\David\git\hangul\src\main\resources\lyrics\gangnam-style\roman.txt</argument>
@@ -115,7 +116,6 @@
 <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
 <id>openshift</id>
 <build>
-   <finalName>hangul</finalName>
    <plugins>
      <plugin>
        <artifactId>maven-war-plugin</artifactId>

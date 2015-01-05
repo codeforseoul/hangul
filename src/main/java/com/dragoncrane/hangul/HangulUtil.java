@@ -18,23 +18,23 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class Prototype {
-	private static Prototype theInstance;
+public class HangulUtil {
+	private static HangulUtil theInstance;
 
 
-	public static Prototype getInstance() {
+	public static HangulUtil getInstance() {
 		if (theInstance == null)
 		{
-			theInstance = new Prototype();
+			theInstance = new HangulUtil();
 		}
 		return theInstance;
 	}
 
-	private Prototype() {
+	private HangulUtil() {
 	}
 
 
-	public String romanizeString( String toRomanize ) {
+	public String romanize( String toRomanize ) {
 		StringBuffer buff = new StringBuffer();
 		char[] chars = toRomanize.toCharArray();
 		boolean isPrevHangul = false;
@@ -68,10 +68,10 @@ public class Prototype {
 		//http://stackoverflow.com/questions/3844307/how-to-read-text-file-from-relative-path-in-a-project
 		//http://stackoverflow.com/questions/309424/read-convert-an-inputstream-to-a-string
 		//http://stackoverflow.com/questions/2788080/reading-a-text-file-in-java
-		InputStream inputStream = Prototype.class.getResourceAsStream( inFileName );
+		InputStream inputStream = HangulUtil.class.getResourceAsStream( inFileName );
 //		OutputStream outputStream = Prototype.class.getResourceAsStream( outFile );
 		String hangul = IOUtils.toString( inputStream );
-		String romanized = this.romanizeString( hangul );
+		String romanized = this.romanize( hangul );
 		System.out.println( hangul );
 		System.out.println( romanized );
 
@@ -92,7 +92,7 @@ public class Prototype {
 
 	public static void main( String[] args )
 	throws IOException {
-		Prototype proto = Prototype.getInstance();
+		HangulUtil proto = HangulUtil.getInstance();
 		String inFile = args[ 0 ];
 		String outFile = args[ 1 ];
 		proto.romanizeFile( inFile, outFile );
