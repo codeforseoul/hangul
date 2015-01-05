@@ -101,6 +101,6 @@ public class HangulUtilTest {
 
 	@Test
 	public void testNonHangulMixing() {
-		testRomanization( "악XYZ 악악:악악악", "ahkxyz ahk-ahk:ahk-ahk-ahk" );
+		testRomanization( "악xyz 악악:악악악", "ahkXYZ ahk-ahk:ahk-ahk-ahk" );
 	}
 }
