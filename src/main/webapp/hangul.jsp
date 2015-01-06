@@ -44,7 +44,7 @@ Type in some mixed Korean and English text:
 	id="textarea"
 	cols="40"
 	rows="4">
-Sample input mixing English and 한글
+안녕하세요! mix English and 한글 text
 </textarea>
 
 <!--
@@ -57,28 +57,13 @@ Sample input mixing English and 한글
 <%
 	if ( request.getParameter( "hangulText" ) != null ) {
 %>
-
+	<%
+		String hangul = request.getParameter( "hangulText" );
+	%>
+	<%=HangulUtil.getInstance().romanize( hangul )%>
 <%
-	String hangul = request.getParameter( "hangulText" );
+	}
 %>
-
-<table border="0">
-	<tr>
-		<td>Original 한글:</td>
-		<td><%=request.getParameter( "hangulText" )%></td>
-	</tr>
-	<tr>
-		<td>Romanized:</td>
-		<td><%=HangulUtil.getInstance().romanize( hangul )%></td>
-	</tr>
-</table>
-
-
-
-
-
-<%-- matches if ( param != null ) ... --%>
-<% } %>
 
 <p>
 <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
