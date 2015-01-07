@@ -116,7 +116,7 @@ public class Block {
 		}
 		else
 		{
-			romanization = String.valueOf( hangul );
+			romanization = String.valueOf( hangul ).toUpperCase();
 		}
 	}
 
