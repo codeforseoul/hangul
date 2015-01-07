@@ -59,7 +59,6 @@
 		<finalName>hangul</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
@@ -80,8 +79,8 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.6</source>
+					<target>1.6</target>
 				</configuration>
 			</plugin>
 
@@ -108,25 +107,24 @@
 			</plugin>
 		</plugins>
 	</build>
-<profiles>
-        <profile>
+	<profiles>
+		<profile>
 <!-- When built in OpenShift the openshift profile will be used when invoking mvn. -->
 <!-- Use this profile for any OpenShift specific customization your app will need. -->
 <!-- By default that is to put the resulting archive into the deployments folder. -->
 <!-- http://maven.apache.org/guides/mini/guide-building-for-different-environments.html -->
-<id>openshift</id>
-<build>
-   <plugins>
-     <plugin>
-       <artifactId>maven-war-plugin</artifactId>
-       <version>2.2</version>
-       <configuration>
-         <outputDirectory>deployments</outputDirectory>
-         <warName>ROOT</warName>
-       </configuration>
-     </plugin>
-   </plugins>
- </build>
-</profile>
-    </profiles>
+			<id>openshift</id>
+			<build>
+				<finalName>hangul</finalName>
+				<plugins>
+					<plugin>
+						<artifactId>maven-war-plugin</artifactId>
+						<configuration>
+							<outputDirectory>deployments</outputDirectory>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 </project>
