@@ -1,6 +1,6 @@
-#Korean Hangul Romanization
+# Korean Hangul Romanization
 
-###Reference Information:
+### Reference Information:
 
  - [Hangul Unicode code sample in Perl](http://search.cpan.org/~sadahiro/Lingua-KO-Hangul-Util-0.27/Util.pm)
  - [Wikipedia Hangul Unicode guide](http://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode)
@@ -11,7 +11,7 @@
 
 The Hangul writing system is widely praised for its elegance: it is consistent, compact, and easy to learn.
 
-Yet most westerner's first encounter with the Korean language is not with Hangul letters ("¼­¿ï"), but in Romanized form ("Seoul"). In this form, they tend to mangle the pronunciation, to the dismay of native Koreans.
+Yet most westerner's first encounter with the Korean language is not with Hangul letters ("ì„œìš¸"), but in Romanized form ("Seoul"). In this form, they tend to mangle the pronunciation, to the dismay of native Koreans.
 
 Why this discrepancy?
 
@@ -20,10 +20,10 @@ The problem lies with the romanization system for Hangul, fundamentally based on
 Although MR was replaced in 2002 by the [Revised Romanization](http://en.wikipedia.org/wiki/Revised_Romanization_of_Korean) system, the changes mostly focused on consonants, e.g.:
 
 ```
-ÇÑ±Û		MR		=> RR
+í•œê¸€		MR		=> RR
 ====================
-ºÎ»ê		Pusan	=> Busan
-´ë±¸		Taegu	=> Daegu
+ë¶€ì‚°		Pusan	=> Busan
+ëŒ€êµ¬		Taegu	=> Daegu
 ```
 
 
@@ -33,8 +33,8 @@ The MR -> RR change did not sufficiently address the vowels.
 
 While Vowels written in Hangul are consistent, unique and comprehensible, they become more difficult in Romanization for a number of reasons:
 
- 1. Hangul vowels differences are subtle to untrained western ears (ÀÇ, ¿Ü, ¿Ö, etc)
- 2. Hangul vowels are consistent, but Romanized vowels less so (¼­ is sometimes "seo", other times "suh")
+ 1. Hangul vowels differences are subtle to untrained western ears (ì˜, ì™¸, ì™œ, etc)
+ 2. Hangul vowels are consistent, but Romanized vowels less so (ì„œ is sometimes "seo", other times "suh")
  3. Hangul makes syllable alignment is clear-cut, but Romanization does not ("Yeouido" mispronounced as "ye-o-u-i-do" vs. "yeo-ui-do")
 
 
@@ -42,7 +42,7 @@ While Vowels written in Hangul are consistent, unique and comprehensible, they b
 
 For the above reasons, the romanization standard rests on the following features:
 
- 1. each vowel's romanization is optimized for consistent, accurate, and intuitive pronunciation to a contemporary western speaker (¾Æ: "a" => "ah")
+ 1. each vowel's romanization is optimized for consistent, accurate, and intuitive pronunciation to a contemporary western speaker (ì•„: "a" => "ah")
  2. if 2 different vowels have the same pronunciation, they may have the same romanization. We sacrifice uniqueness to gain simplicity
  3. syllable alignment will be explicitly denoted by hyphenation ("seoul" => "suh-ool")
 
@@ -73,57 +73,57 @@ For the above reasons, the romanization standard rests on the following features
 Basic Vowels
 
 ```
-ÇÑ±Û		RR		New
+í•œê¸€		RR		New
 ===		===		===
-¾Æ		a		ah
-¾î		eo		uh
-¿À		o		oh
-¿ì		u		oo
-À¸		eu		u		# pronounce very briefly
-ÀÌ		i		ee
+ì•„		a		ah
+ì–´		eo		uh
+ì˜¤		o		oh
+ìš°		u		oo
+ìœ¼		eu		u		# pronounce very briefly
+ì´		i		ee
 ```
 
 Basic Y-vowels
 
 ```
-ÇÑ±Û		RR		New
+í•œê¸€		RR		New
 ===		===		===
-¾ß		ya		yah
-¿©		yeo		yuh
-¿ä		yo		yoh
-À¯		yu		yoo
+ì•¼		ya		yah
+ì—¬		yeo		yuh
+ìš”		yo		yoh
+ìœ 		yu		yoo
 ```
 
 Compound Vowels
 
 ```
-ÇÑ±Û		RR		New
+í•œê¸€		RR		New
 ===		===		===
-¾Ö		ae		eh
-¿¡		e		ay
-¿Ü		oe		weh
-À§		w		wee
+ì• 		ae		eh
+ì—		e		ay
+ì™¸		oe		weh
+ìœ„		w		wee
 ```
 
 Compound Y-Vowels
 
 ```
-ÇÑ±Û		RR		New
+í•œê¸€		RR		New
 ===		===		===
-¾ê		yae		yeh
-¿¹		ye		yay
+ì–˜		yae		yeh
+ì˜ˆ		ye		yay
 ```
 
 Dipthongs/Tripthongs
 
 ```
-ÇÑ±Û		RR		New
+í•œê¸€		RR		New
 ===		===		===
-¿Í		wa		wah
-¿Ö		wae		weh
-¿ö		wo		wuh
-¿ş		we		way
-ÀÇ		ui		uee
+ì™€		wa		wah
+ì™œ		wae		weh
+ì›Œ		wo		wuh
+ì›¨		we		way
+ì˜		ui		uee
 ```
 
 
@@ -135,13 +135,13 @@ The underlying romanization standard is a simple engine that takes in Hangul and
 
 This engine can be plugged into a variety of contexts:
 
-###Music
+### Music
 K-Pop is steadily growing in popularity abroad. Moreover, due to streaming services, musicians are disproportionately dependent on overseas sales for sales revenue (e.g. Psy's "Gangnam Style" earned over $10M in the US, but less than $100,000 in the Korean market).
 
 Many of these fans would like to sing along to their favorite K-pop songs but do not wish to invest the time in learning Hangul. An improved romanization system would make the lyrics more accessible, increasing sales volume.
 
 
-###OCR for tourism and dining
+### OCR for tourism and dining
 Tourists in Korea trying to read a street sign or building name or dining at a Korean restaurant but unsure how to pronounce a dish, could snap a photo, scan the image into an OCR text converter, and pass that Hangul text into our engine which would return a pronunciation guide.
 
 Free Hangul OCR Readers:
@@ -169,4 +169,6 @@ The headache of updating the maps yet again from "Seoul" to "suh-ool" and "Gangn
 Rather, the new romanazation standard could be used as a parenthetical aside *alongside the official spelling* to aide pronunciation.
 
 
+# License
+[GPL v2.0] (LICENSE)
 
