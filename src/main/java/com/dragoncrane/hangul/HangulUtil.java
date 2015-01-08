@@ -60,12 +60,6 @@ public class HangulUtil {
 
 		// write out to file
 		File outFile = new File( outFileName );
-		 
-		// if file doesnt exists, then create it
-		if (!outFile.exists()) {
-			outFile.createNewFile();
-		}
-
 		FileWriter fw = new FileWriter(outFile.getAbsoluteFile());
 		BufferedWriter bw = new BufferedWriter(fw);
 		bw.write( romanized );
