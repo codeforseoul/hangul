@@ -26,25 +26,25 @@ public class HangulUtil {
 
 
 	public String romanize( String toRomanize ) {
-		StringBuffer buff = new StringBuffer();
+		StringBuilder buff = new StringBuilder();
 		char[] chars = toRomanize.toCharArray();
-		boolean isPrevHangul = false;
+		boolean isPreviousHangul = false;
 		for ( int i = 0; i < chars.length; ++i )
 		{
 			char nextChar = chars[i];
 			Block block = new Block( nextChar );
 
-			if ( isPrevHangul && block.isHangul() )
+			if ( isPreviousHangul && block.isHangul() )
 			{
 				buff.append( '-' );
 			}
 			buff.append( block.toString() );
 
 			// last step: prepare for hyphenation of next char
-			isPrevHangul = block.isHangul();
+			isPreviousHangul = block.isHangul();
 		}
-		String retVal = buff.toString();
-		return retVal;
+		String hangul = buff.toString();
+		return hangul;
 	}
 
 
