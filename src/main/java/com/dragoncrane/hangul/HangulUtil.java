@@ -60,7 +60,7 @@ public class HangulUtil {
 
 		// write out to file
 		File outFile = new File( outFileName );
-		FileWriter fw = new FileWriter(outFile.getAbsoluteFile());
+		FileWriter fw = new FileWriter(outFile);
 		BufferedWriter bw = new BufferedWriter(fw);
 		bw.write( romanized );
 		bw.close();
