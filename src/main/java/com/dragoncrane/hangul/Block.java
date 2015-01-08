@@ -107,7 +107,7 @@ public class Block {
 			unicodeOffset /= vowels.length;
 			int leadOffset = unicodeOffset;
 
-			StringBuffer buff = new StringBuffer();
+			StringBuilder buff = new StringBuilder();
 			
 			buff.append( leads[ leadOffset ] );
 			buff.append( vowels[ vowelOffset ] );
