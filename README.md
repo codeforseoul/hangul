@@ -1,10 +1,17 @@
 # Korean Hangul Romanization
 
-### Reference Information:
+### Summary (요약)
 
- - [Hangul Unicode code sample in Perl](http://search.cpan.org/~sadahiro/Lingua-KO-Hangul-Util-0.27/Util.pm)
- - [Wikipedia Hangul Unicode guide](http://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode)
- - [Korean government official romanization standard](http://www.korean.go.kr/eng_new/document/roman/roman_01.jsp)
+Most Westerners in English-speaking world often encounter discrepency with the current Korean Romanization system of Hangul, due to several reasons including: subtlety of specific vowels to the untrained ears, inconsistency within vowels. Our purpose is not to revise the current system but to offer a simple guideline to pronouncing Hangul.
+
+영어권 사람들이 대부분 한글을 처음 접할 때 한글의 로마자 표기법에서 많은 혼동을 느끼는데, 이는 로마자 표기법이 영어권의 사람들에겐 음절의 구분이 명확하지 않아 생깁니다 (예: Seoul (서울) => SEO-ul ("세오-울"), Yeoeuido (여의도) => Ye-o-u-i-do ("예-오-우-이-도")). 이는 기존의 로마자 표기법을 폐지하고 2002년에 새로 국립국어원에서 발표한 국어의 로마자 표기법이 영어권 사람들을 대상으로는 모음의 구분을 명확히 하지 않았던 데에서 일어나는데, 각 음절의 발음법을 조금 변형하여 올바른 발음법을 제시하는 데에 의의를 두고 있습니다. 하지만 이전의 로마자 표기법을 개선하여 새로 적용하였을 때 많은 혼란이 있었던 점을 감안하면, 현재의 로마자 표기법을 새로이 개정하자는 것이 아니라, 영어권 사람들이 한글을 접할 때 발음법의 간단한 가이드라인을 제시하는 데에 의의를 두고 있습니다.
+
+
+### Reference Information (참고자료):
+
+ - [Hangul Unicode code sample in Perl](http://search.cpan.org/~sadahiro/Lingua-KO-Hangul-Util-0.27/Util.pm) Perl로 제작된 한글 유니코드 예제
+ - [Wikipedia Hangul Unicode guide](http://en.wikipedia.org/wiki/Korean_language_and_computers#Hangul_in_Unicode) 위키피디아 한글 유니코드 가이드
+ - [Korean government official romanization standard](http://www.korean.go.kr/eng_new/document/roman/roman_01.jsp) 국어의 로마자 표기법
 
 
 ### History of Hangul Romanization
