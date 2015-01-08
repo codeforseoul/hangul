@@ -27,11 +27,9 @@ public class HangulUtil {
 
 	public String romanize( String toRomanize ) {
 		StringBuilder buff = new StringBuilder();
-		char[] chars = toRomanize.toCharArray();
 		boolean isPreviousHangul = false;
-		for ( int i = 0; i < chars.length; ++i )
+		for ( char currentChar : toRomanize.toCharArray() )
 		{
-			char currentChar = chars[i];
 			Block block = new Block( currentChar );
 
 			if ( isPreviousHangul && block.isHangul() )
