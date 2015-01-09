@@ -88,7 +88,6 @@ public class Block {
 		return isHangul;
 	}
 
-	private int iOffset, vOffset, tOffset;
 	private String romanization = "";
 	private boolean isHangul;
 
@@ -107,12 +106,7 @@ public class Block {
 			unicodeOffset /= vowels.length;
 			int leadOffset = unicodeOffset;
 
-			StringBuffer buff = new StringBuffer();
-			
-			buff.append( leads[ leadOffset ] );
-			buff.append( vowels[ vowelOffset ] );
-			buff.append( trailers[ trailerOffset ] );
-			romanization = buff.toString();
+			romanization = leads[leadOffset] + vowels[vowelOffset] + trailers[trailerOffset];
 		}
 		else
 		{
