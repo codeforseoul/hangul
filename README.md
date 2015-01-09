@@ -58,7 +58,17 @@ For the above reasons, the romanization standard rests on the following features
 
 # Technical Details of Solution
 
-### Running this Software
+### Running: pass in string via web
+
+ - setup Tomcat server on your local machine
+ - see [here](http://www.coreservlets.com/Apache-Tomcat-Tutorial/tomcat-7-with-eclipse.html) for instructions on IDE integration
+ - build war via 'mvn package'
+ - copy 'hangul.war' to 'webapp' directk ory of tomcat
+ - go to [http://localhost:8080/hangul/hangul.jsp]
+ - type and submit text into the form (can span multiple lines and mix hangul with non-hangul)
+
+
+### Running: pass in file via cmd
 
  - repository:	Git / GitHub
  - language:	Java
